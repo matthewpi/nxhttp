@@ -1,0 +1,53 @@
+#------------------#
+# IDEs and Editors #
+#------------------#
+
+# JetBrains
+.fleet
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-*
+
+# VIM
+.*.sw[a-p]
+
+# Visual Studio Code
+.vscode
+
+# Zed
+.zed
+
+#-------------------#
+# Operating Systems #
+#-------------------#
+
+# External Drives
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+
+# MacOS
+/.DS_Store
+*.DS_Store
+
+#-------------------#
+#     Languages     #
+#-------------------#
+
+# Nix
+.direnv
+result
+result-*
+
+#-------------------#
+#   Project Files   #
+#-------------------#
+
+# git-hooks.nix
+.pre-commit-config.yaml
