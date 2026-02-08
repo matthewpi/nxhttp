@@ -126,6 +126,7 @@ func (c *Client) Do(req *Request, opts ...RequestOption) (*Response, error) {
 		nxretry.MaxAttempts(c.maxAttempts),
 		c.backoff,
 	)
+out:
 	for range rty.Next(ctx) {
 		// Execute the request.
 		r, doErr = doRequest(httpClient, req)
@@ -175,7 +176,7 @@ func (c *Client) Do(req *Request, opts ...RequestOption) (*Response, error) {
 		default:
 			// The request was either successful or we hit a fatal error, either way
 			// we are done.
-			break
+			break out
 		}
 
 		// Get the duration we should wait from the Retry-After header.
